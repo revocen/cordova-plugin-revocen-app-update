@@ -1,6 +1,6 @@
 # cordova-plugin-revocen-app-update
 
-- cordova插件，用于原生APK的版本检查更新
+# 模仿cordova热更新插件做的用于原生APK的版本检查更新的插件
 
 安装插件后需要在cordova项目根目录的config.xml中添加以下配置
 ```
