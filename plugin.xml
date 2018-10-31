@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-revocen-app-update" version="0.0.1">
+    <name>VersionManagerPlugin</name>
+    <description>Cordova Android Native Update</description>
+    <js-module src="www/appVersionManager.js" name="appVersionManager">
+        <clobbers target="appVersionManager" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova-android" version=">=4.0.0" />
+    </engines>
+
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="org.revocen.cavmp.fileprovider"
+                android:grantUriPermissions="true"
+                android:exported="false"
+                >
+                <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/revocen_file_paths" />
+            </provider>
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="VersionManagerPlugin">
+                <param name="android-package" value="org.revocen.cavmp.VersionManagerPlugin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+        </config-file>
+
+        <framework src="src/android/RevocenAppVersionManager" custom="true"/>
+    </platform>
+</plugin>

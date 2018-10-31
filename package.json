@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "revocen"
+  },
+  "cordova": {
+    "id": "cordova-plugin-revocen-app-update",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "cordova-plugin-revocen-app-update",
+  "engines": {
+    "cordovaDependencies": {
+      "0.01": {
+        "cordova-android": ">3.0.0"
+      }
+    }
+  },
+  "name": "cordova-plugin-revocen-app-update",
+  "version": "0.01"
+}
