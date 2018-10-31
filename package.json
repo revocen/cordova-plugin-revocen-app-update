@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-revocen-app-update",
-  "version": "0.01",
+  "version": "0.0.1",
   "description": "android native update manager",
   "repository": {
     "type": "git",
