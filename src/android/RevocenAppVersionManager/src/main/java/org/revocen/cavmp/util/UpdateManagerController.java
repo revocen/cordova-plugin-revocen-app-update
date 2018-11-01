@@ -60,7 +60,7 @@ public class UpdateManagerController {
             if (isUpdate(lastVersionCode)) {
                 showDownloadDialog(last);
             } else {
-                Toast.makeText(this.context, "已经是最新版本", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this.context, "已经是最新版本", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             e.printStackTrace();
